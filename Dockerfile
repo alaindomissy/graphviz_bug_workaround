@@ -7,10 +7,12 @@ USER root
 # Add dependency
 RUN apt-get update
 RUN apt-get install -y graphviz
+RUN apt-get install -y pkg-config
 
 USER main
 
 RUN pip install graphviz
+RUN pip install pygraphviz
 
 # Install requirements for Python 2
 # ADD requirements.txt requirements.txt
